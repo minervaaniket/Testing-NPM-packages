@@ -1,0 +1,21 @@
+{
+  "name": "aniketcodewithgit1",
+  "version": "1.0.0",
+  "description": "sample",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minervaaniket/Testing-NPM-packages.git"
+  },
+  "keywords": [
+    "sample",
+    "git",
+    "code"
+  ],
+  "author": "Aniket",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/minervaaniket/Testing-NPM-packages/issues"
+  },
+  "homepage": "https://github.com/minervaaniket/Testing-NPM-packages#readme"
+}
