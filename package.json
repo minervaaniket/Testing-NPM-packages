@@ -1,0 +1,16 @@
+{
+  "name": "aniketlogger",
+  "version": "1.0.2",
+  "description": "This is used for logging.",
+  "main": "index.js",
+  "dependencies": {
+    "git": "^0.1.5",
+    "init": "^0.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node sample.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
