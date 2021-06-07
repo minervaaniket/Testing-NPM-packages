@@ -4,7 +4,7 @@
   "description": "This is the test package for db implementation",
   "main": "index.js",
   "scripts": {
-    "start": "node login.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
