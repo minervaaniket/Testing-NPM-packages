@@ -1,6 +1,6 @@
 {
   "name": "aniketdbtestlsq",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This is the test package for db implementation",
   "main": "index.js",
   "scripts": {
