@@ -1,0 +1,25 @@
+{
+  "name": "aniketdbtestlsq",
+  "version": "1.0.0",
+  "description": "This is the test package for db implementation",
+  "main": "index.js",
+  "scripts": {
+    "start": "node login.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minervaaniket/npmtestdb.git"
+  },
+  "author": "Aniket",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/minervaaniket/npmtestdb/issues"
+  },
+  "homepage": "https://github.com/minervaaniket/npmtestdb#readme",
+  "dependencies": {
+    "mongodb": "^3.6.9",
+    "prompt": "^1.1.0",
+    "prompt-sync": "^4.2.0",
+    "save": "^2.4.0"
+  }
+}
