@@ -2,6 +2,7 @@ const {verified,getvalidationvalue}=require('./validate.js');
 const {createdbfun}=require('./createdb.js');
 const {displaydbfun}=require('./displaydb.js');
 const prompt = require('prompt-sync')({sigint: true});
+const log=require('aniketlogger');
 module.exports.start=function()
 {
     while(!getvalidationvalue())
@@ -10,6 +11,7 @@ module.exports.start=function()
         const password = prompt('Password: ');
         if(verified(id,password))
         {
+            log.info("info check",this);
             console.log('\nLogin Successfull, Welcome\n');
             break;
         }

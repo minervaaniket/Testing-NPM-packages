@@ -1,6 +1,6 @@
 {
   "name": "aniketdbtestlsq",
-  "version": "1.0.2",
+  "version": "1.0.7",
   "description": "This is the test package for db implementation",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/minervaaniket/npmtestdb#readme",
   "dependencies": {
+    "aniketlogger": "^1.0.1",
     "mongodb": "^3.6.9",
     "prompt": "^1.1.0",
     "prompt-sync": "^4.2.0",
