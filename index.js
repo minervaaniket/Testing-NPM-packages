@@ -8,7 +8,7 @@ var seconds = current_time.getSeconds();
 
 function infofun(message)
 {
-    console.log("\nLevel: Info, "+"Message: "+message+", Logged At: "+current_time.toLocaleDateString()+" "+current_time.toLocaleTimeString()+" Logged By "+console.trace());
+    console.log("\nLevel: Info, "+"Message: "+message+", Logged At: "+current_time.toLocaleDateString()+" "+current_time.toLocaleTimeString());
 }
 function fatalfun(message)
 {    
@@ -18,18 +18,14 @@ function warningfun(message)
 {
     console.log("\nLevel: Warning, "+"Message: "+message+", Logged At: "+current_time.toLocaleDateString()+" "+current_time.toLocaleTimeString());
 }
+function errorfun(message)
+{
+    console.log("\nLevel: Error, "+"Message: "+message+", Logged At: "+current_time.toLocaleDateString()+" "+current_time.toLocaleTimeString());
+}
 module.exports=
 {
         info : infofun,
-        fatal :  fatalfun,
-        warning :  warningfun
+        fatal : fatalfun,
+        warn : warningfun,
+        error : errorfun
 }
-
-/*
-infofun - logfun(info, "hello this is info log",data)
-fatalfun -
-errrfun - 
-
-
-logfun(level,message,data)---- mesage,data ka typ string hona chahiy -- if not stringify
-print---level,message,data*/
