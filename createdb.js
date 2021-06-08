@@ -7,7 +7,7 @@ module.exports.createdbfun=function()
     {
         while(true)
         {
-            console.log("\nEnter DB Info\n");
+            log.info("\nEnter DB Info\n");
             var dbname = prompt('DB Name: ');
             if(!dbdetails.has(dbname))
             {
@@ -15,17 +15,17 @@ module.exports.createdbfun=function()
             }
             else
             {
-                console.log("\nDB Name already exists, Try again with unique value.");
+                log.error("\nDB Name already exists, Try again with unique value.");
             }
         }
         var dbdescription = prompt('DB Description: ');
-        console.log("\nDB created successfully\n");
+        log.info("\nDB created successfully\n");
         dbdetails.set(dbname,dbdescription);
         return dbdetails;
     }
     else
     {
-        console.log("\nSorry, You are \"Not Verified\". Please run \"npm start\" to Login and then run \"npm run createdb\".\n");
+        log.fatal("\nSorry, You are \"Not Verified\". Please run \"npm start\" to Login and then run \"npm run createdb\".\n");
         return dbdetails;
     }
 }

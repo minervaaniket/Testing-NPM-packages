@@ -11,19 +11,18 @@ module.exports.start=function()
         const password = prompt('Password: ');
         if(verified(id,password))
         {
-            log.info("info check",this);
-            console.log('\nLogin Successfull, Welcome\n');
+            log.info('\nLogin Successfull, Welcome\n');
             break;
         }
         else
         {
-            console.log("\nFailed, Please try again\n");
+            log.warn("\nFailed, Please try again\n");
         }
     }
     var dbdetails=null;
     while(true)
     {
-        console.log("Enter 1 to Create DB, Enter 2 to Display all DB, 3 to search DB and 0 to end process.\n")
+        log.info("Enter 1 to Create DB, Enter 2 to Display all DB, 3 to search DB and 0 to end process.\n")
         const menu =  prompt('Choose your option: ');
         if(menu==1)
         {
@@ -37,26 +36,26 @@ module.exports.start=function()
             }
             else
             {
-                console.log("\nNo DB Found.\n")
+                log.error("\nNo DB Found.\n");
             }
         }
         else if(menu==3)
         {
             if(!dbdetails)
             {
-                console.log("\nNo Database exists, Please first create Database.\n")
+                log.fatal("\nNo Database exists, Please first create Database.\n")
             }
             else
             {
                 const SearchedKey =  prompt('Enter Database Name to search: ');
                 if(dbdetails && dbdetails.has(SearchedKey))
                 {
-                    console.log("\nDatabase Name: "+SearchedKey+"\n")
-                    console.log("Database Description: "+dbdetails.get(SearchedKey)+"\n"); 
+                    log.info("\nDatabase Name: "+SearchedKey+"\n")
+                    log.info("Database Description: "+dbdetails.get(SearchedKey)+"\n"); 
                 }
                 else
                 {
-                    console.log("\nNo database found with Database Name: \""+SearchedKey+"\"\n");
+                    log.error("\nNo database found with Database Name: \""+SearchedKey+"\"\n");
                 }
             }
         }
@@ -66,7 +65,7 @@ module.exports.start=function()
         }
         else
         {
-            console.log("\nInvalid option\n");
+            log.fatal("\nInvalid option\n");
         }
     }
 }
