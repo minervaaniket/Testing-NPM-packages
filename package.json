@@ -1,6 +1,6 @@
 {
   "name": "aniketlogger",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This is used for logging.",
   "main": "index.js",
   "dependencies": {
