@@ -11,18 +11,18 @@ module.exports.start=function()
         const password = prompt('Password: ');
         if(verified(id,password))
         {
-            log.info('\nLogin Successfull, Welcome\n');
+            log.info('Login Successfull, Welcome');
             break;
         }
         else
         {
-            log.warn("\nFailed, Please try again\n");
+            log.warn("Failed, Please try again");
         }
     }
     var dbdetails=null;
     while(true)
     {
-        log.info("Enter 1 to Create DB, Enter 2 to Display all DB, 3 to search DB and 0 to end process.\n")
+        console.log("\nEnter 1 to Create DB, Enter 2 to Display all DB, 3 to search DB and 0 to end process.\n");
         const menu =  prompt('Choose your option: ');
         if(menu==1)
         {
@@ -36,26 +36,25 @@ module.exports.start=function()
             }
             else
             {
-                log.error("\nNo DB Found.\n");
+                log.error("No DB Found.");
             }
         }
         else if(menu==3)
         {
             if(!dbdetails)
             {
-                log.fatal("\nNo Database exists, Please first create Database.\n")
+                log.fatal("No Database exists, Please first create Database.")
             }
             else
             {
                 const SearchedKey =  prompt('Enter Database Name to search: ');
                 if(dbdetails && dbdetails.has(SearchedKey))
                 {
-                    log.info("\nDatabase Name: "+SearchedKey+"\n")
-                    log.info("Database Description: "+dbdetails.get(SearchedKey)+"\n"); 
+                    log.info("\nDatabase Name: "+SearchedKey+"\nDatabase Description: "+dbdetails.get(SearchedKey)+"\n"); 
                 }
                 else
                 {
-                    log.error("\nNo database found with Database Name: \""+SearchedKey+"\"\n");
+                    log.error("No database found with Database Name: \""+SearchedKey+"\"");
                 }
             }
         }
@@ -65,7 +64,7 @@ module.exports.start=function()
         }
         else
         {
-            log.fatal("\nInvalid option\n");
+            log.fatal("Invalid option");
         }
     }
 }

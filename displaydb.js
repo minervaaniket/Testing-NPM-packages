@@ -1,19 +1,19 @@
 const create=require('./createdb.js');
+const log=require('aniketlogger');
 const {getvalidationvalue}=require('./validate.js');
 const prompt = require('prompt-sync')({sigint: true});
 
 module.exports.displaydbfun=function(dbdetails)
 {
-    log.info("\nDisplay db\n");
+    console.log("\nDisplay db\n");
     if(getvalidationvalue())
     {
         dbdetails.forEach((values,keys) => {
-            log.info("Database Name: "+keys+"\n")
-            log.info("Database Description: "+values+"\n");        
+            log.info("Database Name: "+keys+"\n"+"Database Description: "+values);        
         });
     }
     else
     {
-        log.fatal("\nSorry, You are \"Not Verified\". Please run \"npm start\" to Login and then run \"npm run createdb\".\n");
+        log.fatal("Sorry, You are \"Not Verified\". Please run \"npm start\" to Login and then run \"npm run createdb\".");
     }
 }
