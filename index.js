@@ -1,3 +1,5 @@
+const prompt = require('prompt-sync')({sigint: true});
+const colors = require('colors');
 var current_time = new Date();
 var date = ("0" + current_time.getDate()).slice(-2);
 var month = ("0" + (current_time.getMonth() + 1)).slice(-2);
@@ -8,19 +10,35 @@ var seconds = current_time.getSeconds();
 
 function infofun(message)
 {
-    console.log("\nLevel: Info, "+"Message: "+message+", Logged At: "+current_time.toLocaleDateString()+" "+current_time.toLocaleTimeString());
+    console.log(message.black.bgWhite);
+    if(prompt('\nPress 1 to show Details: '))
+    {
+        console.log(("\nLevel: Info, "+"Message: "+message+", Logged At: "+current_time.toLocaleDateString()+" "+current_time.toLocaleTimeString()).black.bgWhite);
+    }
 }
 function fatalfun(message)
 {    
-    console.log("\nLevel: Fatal, "+"Message: "+message+", Logged At: "+current_time.toLocaleDateString()+" "+current_time.toLocaleTimeString());
+    console.log(message.bgRed);
+    if(prompt('\nPress 1 to show Details: '))
+    {
+        console.log(("\nLevel: Fatal, "+"Message: "+message+", Logged At: "+current_time.toLocaleDateString()+" "+current_time.toLocaleTimeString()).bgRed);
+    }
 }
 function warningfun(message)
 {
-    console.log("\nLevel: Warning, "+"Message: "+message+", Logged At: "+current_time.toLocaleDateString()+" "+current_time.toLocaleTimeString());
+    console.log(message.yellow);
+    if(prompt('\nPress 1 to show Details: '))
+    {
+        console.log(("\nLevel: Warning, "+"Message: "+message+", Logged At: "+current_time.toLocaleDateString()+" "+current_time.toLocaleTimeString()).yellow);
+    }
 }
 function errorfun(message)
 {
-    console.log("\nLevel: Error, "+"Message: "+message+", Logged At: "+current_time.toLocaleDateString()+" "+current_time.toLocaleTimeString());
+    console.log(message.red);
+    if(prompt('\nPress 1 to show Details: '))
+    {
+        console.log(("\nLevel: Error, "+"Message: "+message+", Logged At: "+current_time.toLocaleDateString()+" "+current_time.toLocaleTimeString()).red);
+    }
 }
 module.exports=
 {
